@@ -1,4 +1,4 @@
-from telegram.ext import Updater, CommandHandler, MessageHandler, filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import Commands as c
 TOKEN = "6375556542:AAF3_hgHVZzrf5XKEDXd9Z9Odxdvp64a4AA"
 
@@ -10,7 +10,7 @@ def main():
     #Start command
     dp.add_handler(CommandHandler("start", c.start_command))
     #Wrong command
-    dp.add_handler(MessageHandler(filters.Text,c.wrong_command))
+    dp.add_handler(MessageHandler(Filters.text,c.wrong_command))
     updater.start_polling()
     updater.idle()
 
