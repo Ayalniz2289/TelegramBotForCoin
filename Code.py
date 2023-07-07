@@ -7,8 +7,10 @@ print("Bot çalışmaya başladı!")
 def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
+    #Start command
     dp.add_handler(CommandHandler("start", c.start_command))
-
+    #Wrong command
+    dp.add_handler(MessageHandler(filters.Text,c.wrong_command))
     updater.start_polling()
     updater.idle()
 
