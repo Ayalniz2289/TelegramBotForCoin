@@ -23,7 +23,6 @@ def price_command(update,context):
   else:
     message="Please enter the name of the coin you want to see the price of. For example: /price bitcoin"
     return update.message.reply_text(message)
-      
 
 
  
